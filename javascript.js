@@ -23,14 +23,7 @@ function createRandomHeart() {
   }
 
   document.getElementById("startButton").addEventListener("click", () => {
-    if (intervalId) {
-      // Nếu đang chạy thì dừng lại
-      clearInterval(intervalId);
-      intervalId = null;
-      document.getElementById("startButton").innerText = "Bắt đầu";
-    } else {
-      // Bắt đầu hiển thị trái tim
-      intervalId = setInterval(createRandomHeart, 500);
-      document.getElementById("startButton").innerText = "Dừng lại";
-    }
+    document.getElementById("startButton").hidden = true;
+    document.getElementById("input").readOnly = true;
+    setInterval(createRandomHeart, 500);
   });
