@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,600&display=swap');
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     height: 100vh;
 }
@@ -79,7 +79,7 @@ button:hover {
     position: absolute;
     width: 100px;
     height: 90px;
-    background-color: #ff69b4; /* Màu hồng */
+    background-color: #ff69b4;
     transform: rotate(-45deg);
     animation: fade-in 0.5s ease-in-out;
   }
@@ -109,7 +109,7 @@ button:hover {
     width: 150px;
     top: 25%;
     left: 65%;
-    transform: translate(-50%, -50%) rotate(45deg); /* Xoay chữ đúng hướng */
+    transform: translate(-50%, -50%) rotate(45deg);
     color: white;
     font-size: 16px;
     font-weight: bold;

@@ -29,3 +29,4 @@ document.getElementById("startButton").addEventListener("click", () => {
   document.getElementById("input").readOnly = true;
   setInterval(createRandomHeart, 500);
 });
+
