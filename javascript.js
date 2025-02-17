@@ -1,7 +1,6 @@
 /** @format */
 
 let intervalId = null;
-document.getElementById("startButton").hidden = true;
 function createRandomHeart() {
   // Tạo thẻ div trái tim
   const heart = document.createElement("div");
