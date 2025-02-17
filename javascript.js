@@ -1,6 +1,7 @@
 /** @format */
 
 let intervalId = null;
+document.getElementById("startButton").hidden = true;
 function createRandomHeart() {
   // Tạo thẻ div trái tim
   const heart = document.createElement("div");
@@ -30,3 +31,14 @@ document.getElementById("startButton").addEventListener("click", () => {
   setInterval(createRandomHeart, 500);
 });
 
+// Theo dõi thay đổi dữ liệu trong input
+input.addEventListener("input", () => {
+    if (input.value.trim() === "") {
+      // Khi input có dữ liệu, nút trở về vị trí cũ
+      document.getElementById("startButton").hidden = true;
+    }
+    else{
+        // Khi input trống, nút bắt đầu hiện lên
+        document.getElementById("startButton").hidden = false
+    }
+  });
