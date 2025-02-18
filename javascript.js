@@ -1,6 +1,10 @@
 /** @format */
 
 let intervalId = null;
+let isMusicPlaying = false;
+const music = document.getElementById("backgroundMusic");
+music.volume = 0.5;
+document.getElementById("startButton").hidden = true;
 function createRandomHeart() {
   // Tạo thẻ div trái tim
   const heart = document.createElement("div");
@@ -27,7 +31,7 @@ function createRandomHeart() {
 document.getElementById("startButton").addEventListener("click", () => {
   document.getElementById("startButton").hidden = true;
   document.getElementById("input").readOnly = true;
-  setInterval(createRandomHeart, 500);
+  setInterval(createRandomHeart, 1000);
 });
 
 // Theo dõi thay đổi dữ liệu trong input
@@ -41,3 +45,11 @@ input.addEventListener("input", () => {
         document.getElementById("startButton").hidden = false
     }
   });
+
+  // Phát nhạc nền
+function startMusic() {
+  isMusicPlaying = true;
+  music.play().catch((error) => console.log(error));
+}
+// Bắt đầu phát nhạc khi tương tác
+window.addEventListener("click", startMusic, { once: true });
